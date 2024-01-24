@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "213d3af860afe3db",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebc0e4f9bfa1d16b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ed156bb1eeea9da",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7890fa3e4ab3e18b",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c2f7c6a5a13aa82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d34c544df99d1451",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f06c10f06996c833",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e1d365c6c2883d2c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a8d86f99e6fd5a3c",
+    "type": "split",
+    "children": [
+      {
+        "id": "765408a5c55f6a35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5cc536d86dfef260",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "40fa815ed9af95c1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e9975574a83de76e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7b68ad8dd7e2f0bb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "active": "3ed156bb1eeea9da",
+  "lastOpenFiles": [
+    "creds.html",
+    "50-owned.html",
+    "pasted-image-20240122120344.png",
+    "pasted-image-20240122113840.png",
+    "45-doppelgänger.html",
+    "pasted-image-20240121233633.png",
+    "pasted-image-20240121232400.png",
+    "pasted-image-20240121232230.png",
+    "pasted-image-20240121231651.png",
+    "pasted-image-20240121230749.png",
+    "pasted-image-20240121230540.png",
+    "pasted-image-20240121224524.png",
+    "screenshot_2024-01-21_22_25_12.png",
+    "40-camouflage.html",
+    "35-ghost.html",
+    "30-deploy.html",
+    "25-getting-shell.html",
+    "20-citrix.html",
+    "15-smtp.html",
+    "10-enumeration.html",
+    "lib/scripts/webpage.js",
+    "Untitled.canvas"
+  ]
+}

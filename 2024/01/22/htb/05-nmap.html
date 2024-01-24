@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html><head><title>CTFLover hack stuff | CTF solutions</title><base href="./"/><meta id="root-path" root-path="./"/><link href="/images/favicon.jpeg" rel="icon" sizes="96x96"/><meta content="width=device-width,initial-scale=1,user-scalable=yes,minimum-scale=1,maximum-scale=5" name="viewport"/><meta charset="utf-8"/><link href="lib/styles/obsidian-styles.css" rel="stylesheet"/><link href="lib/styles/theme.css" rel="stylesheet"/><link href="lib/styles/plugin-styles.css" rel="stylesheet"/><link href="lib/styles/snippets.css" rel="stylesheet"/><link href="lib/styles/generated-styles.css" rel="stylesheet"/><style></style><script src="lib/scripts/graph_view.js" type="module"></script><script src="lib/scripts/graph_wasm.js"></script><script src="lib/scripts/tinycolor.js"></script><script crossorigin="anonymous" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script><script src="lib/scripts/webpage.js"></script><script src="lib/scripts/generated.js"></script></head><body class="theme-dark mod-linux show-inline-title loading"><div class="webpage-container"><div class="sidebar-left sidebar"><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" id="theme_toggle" type="checkbox"/><div class="toggle-background"></div></label></div><div class="tree-container file-tree mod-nav-indicator" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Xen</span><button class="clickable-icon collapse-tree-button is-collapsed"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"></svg></button></div><div class="tree-scroll-area"><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="05-nmap.html"><span class="tree-item-title">05-Nmap</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="10-enumeration.html"><span class="tree-item-title">10-Enumeration</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="15-smtp.html"><span class="tree-item-title">15-SMTP</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="20-citrix.html"><span class="tree-item-title">20-Citrix</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="25-getting-shell.html"><span class="tree-item-title">25-Getting Shell</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="30-deploy.html"><span class="tree-item-title">30-Deploy</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="35-ghost.html"><span class="tree-item-title">35-Ghost</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="40-camouflage.html"><span class="tree-item-title">40-Camouflage</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="45-doppelgänger.html"><span class="tree-item-title">45-Doppelgänger</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="50-owned.html"><span class="tree-item-title">50-Owned</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="creds.html"><span class="tree-item-title">creds</span></a></div><div class="tree-item-children"></div></div></div></div></div></div></div></div><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg class="svg-icon" fill="none" height="100%" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div></div><div class="document-container show"><div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists show-properties" style="tab-size:4" tabindex="-1"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section" style="min-height:3352px"><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="mod-header"><div class="inline-title" data-heading="05-Nmap" id="05-Nmap" style="display:block">05-Nmap</div></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-20 10:05 IST
+Nmap scan report for 10.13.38.12
+Host is up (0.20s latency).
+Not shown: 65532 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+25/tcp  open  smtp
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 9.77 seconds
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-20 10:05 IST
+Nmap scan report for 10.13.38.12
+Host is up (0.26s latency).
+
+PORT    STATE SERVICE  VERSION
+25/tcp  open  smtp
+| smtp-commands: CITRIX, SIZE 20480000, AUTH LOGIN, HELP
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+| fingerprint-strings: 
+|   GenericLines, GetRequest: 
+|     220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+|     sequence of commands
+|     sequence of commands
+|   Hello: 
+|     220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+|     EHLO Invalid domain address.
+|   Help: 
+|     220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+|     DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+|   NULL: 
+|_    220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+80/tcp  open  http     Microsoft IIS httpd 7.5
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Did not follow redirect to https://humongousretail.com/
+443/tcp open  ssl/http Microsoft IIS httpd 7.5
+|_http-server-header: Microsoft-IIS/7.5
+|_ssl-date: 2024-01-20T05:36:30+00:00; +1h00m00s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+|_http-title: Did not follow redirect to https://humongousretail.com/
+| ssl-cert: Subject: commonName=humongousretail.com
+| Subject Alternative Name: DNS:humongousretail.com
+| Not valid before: 2019-03-31T21:05:35
+|_Not valid after:  2039-03-31T21:15:35
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port25-TCP:V=7.94%I=7%D=1/20%Time=65AB4DAD%P=x86_64-pc-linux-gnu%r(NULL
+SF:,33,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x20\(EXCHANGE\.HTB\.LOCAL
+SF:\)\r\n")%r(Hello,55,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x20\(EXCH
+SF:ANGE\.HTB\.LOCAL\)\r\n501\x20EHLO\x20Invalid\x20domain\x20address\.\r\n
+SF:")%r(Help,6F,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x20\(EXCHANGE\.H
+SF:TB\.LOCAL\)\r\n211\x20DATA\x20HELO\x20EHLO\x20MAIL\x20NOOP\x20QUIT\x20R
+SF:CPT\x20RSET\x20SAML\x20TURN\x20VRFY\r\n")%r(GenericLines,6F,"220\x20ESM
+SF:TP\x20MAIL\x20Service\x20ready\x20\(EXCHANGE\.HTB\.LOCAL\)\r\n503\x20Ba
+SF:d\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20comm
+SF:ands\r\n")%r(GetRequest,6F,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x2
+SF:0\(EXCHANGE\.HTB\.LOCAL\)\r\n503\x20Bad\x20sequence\x20of\x20commands\r
+SF:\n503\x20Bad\x20sequence\x20of\x20commands\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 59m59s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 41.44 seconds
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-20 10:05 IST
+Nmap scan report for 10.13.38.12
+Host is up (0.18s latency).
+Not shown: 65532 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+25/tcp  open  smtp
+| smtp-commands: CITRIX, SIZE 20480000, AUTH LOGIN, HELP
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+| fingerprint-strings: 
+|   GenericLines, GetRequest: 
+|     220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+|     sequence of commands
+|     sequence of commands
+|   Hello: 
+|     220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+|     EHLO Invalid domain address.
+|   Help: 
+|     220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+|     DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+|   NULL: 
+|_    220 ESMTP MAIL Service ready (EXCHANGE.HTB.LOCAL)
+80/tcp  open  http     Microsoft IIS httpd 7.5
+|_http-title: Did not follow redirect to https://humongousretail.com/
+|_http-server-header: Microsoft-IIS/7.5
+443/tcp open  ssl/http Microsoft IIS httpd 7.5
+| ssl-cert: Subject: commonName=humongousretail.com
+| Subject Alternative Name: DNS:humongousretail.com
+| Not valid before: 2019-03-31T21:05:35
+|_Not valid after:  2039-03-31T21:15:35
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Did not follow redirect to https://humongousretail.com/
+|_ssl-date: 2024-01-20T05:40:43+00:00; +1h00m01s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port25-TCP:V=7.94%I=7%D=1/20%Time=65AB4E99%P=x86_64-pc-linux-gnu%r(NULL
+SF:,33,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x20\(EXCHANGE\.HTB\.LOCAL
+SF:\)\r\n")%r(Hello,55,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x20\(EXCH
+SF:ANGE\.HTB\.LOCAL\)\r\n501\x20EHLO\x20Invalid\x20domain\x20address\.\r\n
+SF:")%r(Help,6F,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x20\(EXCHANGE\.H
+SF:TB\.LOCAL\)\r\n211\x20DATA\x20HELO\x20EHLO\x20MAIL\x20NOOP\x20QUIT\x20R
+SF:CPT\x20RSET\x20SAML\x20TURN\x20VRFY\r\n")%r(GenericLines,6F,"220\x20ESM
+SF:TP\x20MAIL\x20Service\x20ready\x20\(EXCHANGE\.HTB\.LOCAL\)\r\n503\x20Ba
+SF:d\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20comm
+SF:ands\r\n")%r(GetRequest,6F,"220\x20ESMTP\x20MAIL\x20Service\x20ready\x2
+SF:0\(EXCHANGE\.HTB\.LOCAL\)\r\n503\x20Bad\x20sequence\x20of\x20commands\r
+SF:\n503\x20Bad\x20sequence\x20of\x20commands\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 1h00m00s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 301.58 seconds
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-20 10:05 IST
+Nmap scan report for 10.13.38.12
+Host is up (0.28s latency).
+
+PORT      STATE         SERVICE
+53/udp    open|filtered domain
+67/udp    open|filtered dhcps
+68/udp    open|filtered dhcpc
+69/udp    open|filtered tftp
+123/udp   open|filtered ntp
+135/udp   open|filtered msrpc
+137/udp   open|filtered netbios-ns
+138/udp   open|filtered netbios-dgm
+139/udp   open|filtered netbios-ssn
+161/udp   open|filtered snmp
+162/udp   open|filtered snmptrap
+445/udp   open|filtered microsoft-ds
+500/udp   open|filtered isakmp
+514/udp   open|filtered syslog
+520/udp   open|filtered route
+631/udp   open|filtered ipp
+1434/udp  open|filtered ms-sql-m
+1900/udp  open|filtered upnp
+4500/udp  open|filtered nat-t-ike
+49152/udp open|filtered unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 359.77 seconds
+</code><button class="copy-code-button">Copy</button></pre></div><div class="mod-footer"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg class="svg-icon" fill="none" height="100%" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder"><div class="graph-view-container"><div aria-label="Expand" class="graph-icon graph-expand" data-tooltip-position="top" role="button"><svg class="svg-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="7" x2="17" y1="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div><canvas height="512px" id="graph-canvas" width="512px"></canvas></div></div></div><div class="tree-container outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"></svg></button></div><div class="tree-scroll-area"></div></div></div></div></div></div></div></div></body></html>

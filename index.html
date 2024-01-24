@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTFLover hack stuff | CTF solutions</title>
+    <meta name="description"
+        content="Explore the exciting world of cybersecurity challenges with our detailed CTF writeup. Learn the strategies, techniques, and solutions for overcoming the puzzles and capturing the flags. Enhance your skills and dive into the thrilling realm of cybersecurity challenges.">
+    <meta name="author" content="CTFLover">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="google-site-verification" content="MyBM0-gplHiOKmnXCgQjntc4p_gPf7NPIUga-m6QYWo" />
+
+    <script>
+
+        document.addEventListener('D/COMContentLoaded', function () {
+            var toggle = document.getElementById('toggle');
+            toggle.addEventListener('change', function () {
+                var stuff = document.querySelector('.stuff');
+                stuff.classList.toggle('show', toggle.checked);
+            });
+        });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCHZD7DLQ0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RCHZD7DLQ0');
+    </script>
+
+    <link rel="icon" href="images/favicon.jpeg" type="image/png">
+
+</head>
+
+<body>
+
+
+
+    <div class="main">
+        <div class="navbar">
+            <span class="box"><a href="https://ctflover.gitlab.io">CTFLover Solutions </a></span>
+            <div class="stuff">
+                <ul>
+                    <li><a href="about.html">AboutMe</a></li>
+                    <li><a href="https://gitlab.com/ctflover" target="_blank"><img class="image" src='images/gitlab.png'
+                                alt='github'> GitHub</a> </li>
+                    <li><a href="https://www.linkedin.com/in/nakulupadhyay/"><img src='images/linkedin.png'
+                                alt='LINKEDIN' width='15' height='15'> Linkedin</a> </li>
+                    <li><a href="https://app.hackthebox.com/users/1431541"><img class="image" src='images/htb.png'
+                                alt='HTB' width="15" height="20"> HackTheBox</a> </li>
+                    <li><a href="https://www.youtube.com/@ctflover"><img class="image" src="images/yt.png" alt="YT">
+                            YouTube</a> </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="underline"></div>
+
+    <div class="content">
+        <div class="posts">
+
+            <br>
+            <h1 id="post">Posts</h1>
+            <ul id="lists">
+
+                 <li>
+                    <h2><a target="blank" href="2024/01/22/htb/05-nmap.html">HTB Endgame: XEN</a></h2>
+                </li>
+
+                <p>Jan 22, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/endgames/c81e728d9d4c2f636f067f89cc14862c.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    The company has reacted to several recent skimming incidents by investing heavily in their POS systems. Keen to avoid any further negative publicity, they have engaged the services of a penetration testing company to assess the security of their perimeter and internal infrastructure.
+
+Xen is designed to put your skills in enumeration, breakout, lateral movement, and privilege escalation to the test within a small Active Directory environment.
+
+The goal is to gain a foothold on the internal network, escalate privileges and ultimately compromise the domain while collecting several flags along the way.
+                </p>
+                <br>
+
+
+
+                 <li>
+                    <h2><a target="blank" href="2024/01/19/htb/05-Nmap.html">HTB Endgame: P.O.O.</a></h2>
+                </li>
+
+                <p>Jan 19, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/endgames/c4ca4238a0b923820dcc509a6f75849b.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Professional Offensive Operations is a rising name in the cyber security world.
+
+Lately they've been working into migrating core services and components to a state of the art cluster which offers cutting edge software and hardware.
+
+P.O.O. is designed to put your skills in enumeration, lateral movement, and privilege escalation to the test within a small Active Directory environment that is configured with the latest operating systems and technologies.
+
+The goal is to compromise the perimeter host, escalate privileges and ultimately compromise the domain while collecting several flags along the way.
+                </p>
+                <br>
+
+                <li>
+                    <h2><a target="blank" href="2024/01/16/htb/05-Nmap.html">HTB: Cascade</a></h2>
+                </li>
+
+                <p>Jan 16, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/64fef851357b8de1c4834093bf3426f2.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Cascade is a medium difficulty Windows machine configured as a Domain Controller. LDAP anonymous binds are enabled, and enumeration yields the password for user `r.thompson`, which gives access to a `TightVNC` registry backup. The backup is decrypted to gain the password for `s.smith`. This user has access to a .NET executable, which after decompilation and source code analysis reveals the password for the `ArkSvc` account. This account belongs to the `AD Recycle Bin` group, and is able to view deleted Active Directory objects. One of the deleted user accounts is found to contain a hardcoded password, which can be reused to login as the primary domain administrator.
+                </p>
+                <br>
+
+                <li>
+                    <h2><a target="blank" href="2024/01/15/htb/05-Nmap.html">HTB: Sizzle</a></h2>
+                </li>
+
+                <p>Jan 15, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/ed709304142fdf369e529d6e843ad62e.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Sizzle is an &quot;Insane&quot; difficulty WIndows box with an Active Directory environment. A
+                    writable directory in an SMB share allows to steal NTLM hashes which can be cracked to access the
+                    Certificate Services Portal. A self signed certificate can be created using the CA and used for
+                    PSRemoting. A SPN associated with a user allows a kerberoast attack on the box. The user is found to
+                    have Replication rights which can be abused to get Administrator hashes via DCSync.
+
+
+                </p>
+                <br>
+
+                <li>
+                    <h2><a target="blank" href="2024/01/14/htb/05-Nmap.html">HTB: Reel</a></h2>
+                </li>
+
+                <p>Jan 14, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/55d0de0cfa8b70e916abbb3f513dc1a7.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Reel is medium to hard difficulty machine, which requires a client-side attack to bypass the
+                    perimeter, and highlights a technique for gaining privileges in an Active Directory environment.
+                </p>
+                <br>
+
+
+                <li>
+                    <h2><a target="blank" href="2024/01/13/htb/05-Nmap.html">HTB: Resolute</a></h2>
+                </li>
+
+                <p>Jan 13, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/4c86a642ea237dfde036963e6d182b40.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Resolute is an easy difficulty Windows machine that features Active Directory. The Active Directory
+                    anonymous bind is used to obtain a password that the sysadmins set for new user accounts, although
+                    it seems that the password for that account has since changed. A password spray reveals that this
+                    password is still in use for another domain user account, which gives us access to the system over
+                    WinRM. A PowerShell transcript log is discovered, which has captured credentials passed on the
+                    command-line. This is used to move laterally to a user that is a member of the DnsAdmins group. This
+                    group has the ability to specify that the DNS Server service loads a plugin DLL. After restarting
+                    the DNS service, we achieve command execution on the domain controller in the context of
+                    `NT_AUTHORITY\SYSTEM`.
+                </p>
+                <br>
+
+
+                <li>
+                    <h2><a target="blank" href="2024/01/12/htb/05-Nmap.html">HTB: BlackField</a></h2>
+                </li>
+
+                <p>Jan 12, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/7c69c876f496cd729a077277757d219d.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Backfield is a hard difficulty Windows machine featuring Windows and Active Directory
+                    misconfigurations. Anonymous / Guest access to an SMB share is used to enumerate users. Once user is
+                    found to have Kerberos pre-authentication disabled, which allows us to conduct an ASREPRoasting
+                    attack. This allows us to retrieve a hash of the encrypted material contained in the AS-REP, which
+                    can be subjected to an offline brute force attack in order to recover the plaintext password. With
+                    this user we can access an SMB share containing forensics artefacts, including an lsass process
+                    dump. This contains a username and a password for a user with WinRM privileges, who is also a member
+                    of the Backup Operators group. The privileges conferred by this privileged group are used to dump
+                    the Active Directory database, and retrieve the hash of the primary domain administrator.
+                </p>
+                <br>
+
+
+
+                <li>
+                    <h2><a target="blank" href="2024/01/11/HTB/05-NMAP.html">HTB: Active</a></h2>
+                </li>
+
+                <p>Jan 11, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/5837ac5e28291146a9f2a8a015540c28.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain
+                    privileges within an Active Directory environment.
+
+
+                </p>
+                <br>
+                <br>
+
+
+                <li>
+                    <h2><a target="blank" href="2024/01/10/htb/05-nmap.html">HTB: Forest</a></h2>
+                </li>
+                <p>Jan 10, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/7dedecb452597150647e73c2dd6c24c7.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                    Forest in an easy difficulty Windows Domain Controller (DC), for a domain in which Exchange Server
+                    has been installed. The DC is found to allow anonymous LDAP binds, which is used to enumerate domain
+                    objects. The password for a service account with Kerberos pre-authentication disabled can be cracked
+                    to gain a foothold. The service account is found to be a member of the Account Operators group,
+                    which can be used to add users to privileged Exchange groups. The Exchange group membership is
+                    leveraged to gain DCSync privileges on the domain and dump the NTLM hashes.
+
+
+                </p>
+                <br>
+
+
+                <li>
+                    <h2><a target="blank" href="2024/01/08/HTB/sau/05-Nmap.html">HTB: Sau</a></h2>
+                </li>
+                <p>Jan 08, 2024</p>
+                `Sau` is an Easy Difficulty Linux machine that features a `Request Baskets` instance that is vulnerable
+                to Server-Side Request Forgery (SSRF) via
+                `[CVE-2023-27163](https://nvd.nist.gov/vuln/detail/CVE-2023-27163)`. Leveraging the vulnerability we are
+                to gain access to a `Maltrail` instance that is vulnerable to Unauthenticated OS Command Injection,
+                which allows us to gain a reverse shell on the machine as `puma`. A `sudo` misconfiguration is then
+                exploited to gain a `root` shell.
+                <img src="https://labs.hackthebox.com/storage/avatars/1ea2980b9dc2d11cf6a3f82f10ba8702.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:150px;" class="include_image ">
+                <p id='paragraph'>
+                    `Sau` is an Easy Difficulty Linux machine that features a `Request Baskets` instance that is
+                    vulnerable to Server-Side Request Forgery (SSRF) via
+                    `[CVE-2023-27163](https://nvd.nist.gov/vuln/detail/CVE-2023-27163)`. Leveraging the vulnerability we
+                    are to gain access to a `Maltrail` instance that is vulnerable to Unauthenticated OS Command
+                    Injection, which allows us to gain a reverse shell on the machine as `puma`. A `sudo`
+                    misconfiguration is then exploited to gain a `root` shell.
+                </p>
+                <br>
+
+
+                <li>
+                    <h2><a target="blank" href="2023/12/30/HTB/jarvis/05-notes.html">HTB: Jarvis</a></h2>
+                </li>
+                <p>Dec 30, 2023</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/fd39597e558b1b53e91b9ad9dd9619a5.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:150px;" class="include_image ">
+                <p id='paragraph'>
+                    Jarvis is a medium difficulty Linux box running a web server, which has DoS and brute force
+                    protection enabled. A page is found to be vulnerable to SQL injection, which requires manual
+                    exploitation. This service allows the writing of a shell to the web root for the foothold. The www
+                    user is allowed to execute a script as another user, and the script is vulnerable to command
+                    injection. On further enumeration, systemctl is found to have the SUID bit set, which is leveraged
+                    to gain a root shell.
+                </p>
+                <br>
+
+
+                <li>
+                    <h2><a target="blank" href="2023/12/25/paper/paper.html">HTB: Paper</a></h2>
+                </li>
+                <p>Dec 21, 2023</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/eb4e685c033d8af0b8cc00446f295f9d.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:150px;" class="include_image ">
+                <p id='paragraph'>
+                    Paper is an easy Linux machine that features an Apache server on ports 80 and 443,
+                    which are serving the HTTP and HTTPS versions of a website respectively. The website on port 80
+                    returns a default server webpage but the HTTP response header reveals a hidden domain. This hidden
+                    domain is running a WordPress blog, whose version is vulnerable to
+                    [CVE-2019-17671](https://wpscan.com/vulnerability/3413b879-785f-4c9f-aa8a-5a4a1d5e0ba2). This
+                    vulnerability allows us to view the confidential information stored in the draft posts of the blog,
+                    which reveal another URL leading to an employee chat system. This chat system is based on
+                    Rocketchat. Reading through the chats we find that there is a bot running which can be queried for
+                    specific information. We can exploit the bot functionality to obtain the password of a user on the
+                    system. Further host enumeration reveals that the sudo version is vulnerable to
+                    [CVE-2021-3560](https://www.exploit-db.com/exploits/50011) and can be exploited to elevate to root
+                    privileges.
+                </p>
+                <br>
+                <li>
+                    <h2><a target="blank" href="2023/12/21/undetected.html">HTB: Undetected</a></h2>
+                </li>
+                <p>Dec 21, 2023</p>
+                <img src="https://labs.hackthebox.com/storage/avatars/642db092f1e18466871db9f12933396f.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:150px;" class="include_image ">
+                <p id='paragraph'>
+
+                    Undetected is a medium Linux machine that features an Apache server on `port 80`,
+                    which serves a jewellery store website. The initial foothold is gained by exploiting a PHP command
+                    injection vulnerability present in the web application to gain a `www-data` user shell. Enumeration
+                    shows that the system had been previously compromised and privilege escalation requires retracing
+                    the attacker&#039;s steps in order to find the backdoors that were left behind by the initial
+                    compromise. We are further required to analyse and reverse engineer the backdoor inside the `sshd`
+                    binary, which leads to a full system access as the `root` user.
+                </p>
+                <br>
+
+                <li>
+                    <h2><a target="blank" href="2023/12/17/htb-sherlock/ticktock/00-what-we-have.html">HTB Sherlock:
+                            TickTock</a></h2>
+                </li>
+                <p>Dec 17, 2023</p>
+                <p id='paragraph'>
+                    <img src="https://labs.hackthebox.com/storage/challenges/4e4b5fbbbb602b6d35bea8460aa8f8e5.png"
+                        alt="Image" style="float: right; margin-right:50px; margin-left:50px; height:150px;"
+                        class="include_image ">
+
+                    Gladys is a new joiner in the company, she has recieved an email informing her that
+                    the IT department is due to do some work on her PC, she is guided to call the IT team where they
+                    will inform her on how to allow them remote access. The IT team however are actually a group of
+                    hackers that are attempting to attack Forela.
+                </p>
+                <br>
+
+                <li>
+                    <h2><a target="_blank" href="2023/12/14/htb-sherlock/knockknock/05-enumeration.html">HTB Sherlock:
+                            Knock Knock With Zeek</a></h2>
+                </li>
+                <p>Dec 14, 2023</p>
+                <p id='paragraph'>
+
+                    <img src="https://labs.hackthebox.com/storage/challenges/a9a6653e48976138166de32772b1bf40.png"
+                        alt="Image" style="float: right; margin-right:50px; margin-left:50px; height:150px;"
+                        class="include_image ">
+
+                    You are thrusted into a digital crisis at Forela - a crucial Dev server has fallen
+                    victim to a cyber attack. This incident unfolds at a critical time for the company as it is
+                    expanding its business in Pakistan, under the leadership of senior dev Abdullah. Despite assurances
+                    of server hardening, the server was mistakenly exposed to the internet, creating a doorway for the
+                    threat actor. The task involves swift analysis & reporting to prevent catastrophic damage to the
+                    company's operations. Equipped with a packet capture from the time of the incident, players must
+                    sift through a sea of data, with a 1-2 days margin of uncertainty. This cybersecurity whodunit will
+                    put your forensic skills to the test, seeking answers to how the attacker breached their defenses in
+                    the first place. Warning: This Sherlock will require an element of OSINT to complete fully.
+                </p>
+                <br>
+
+                <li>
+                    <h2><a target="_blank" href="2023/12/12/HTB-noter.html">HTB: Noter</a></h2>
+                </li>
+                <img src="https://labs.hackthebox.com/storage/avatars/ea85ecc8e550a6997195e9a75a12ca73.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:150px;" class="include_image ">
+                <p>Dec 12, 2023</p>
+                <p id='paragraph'>Noter is a medium Linux machine that features the exploitation of a Python Flask
+                    application, which uses a `node` module that is vulnerable to remote code execution. As the `MySQL`
+                    daemon is running as user `root`, it can be exploited by leveraging the user-defined functions of
+                    `MySQL` to gain RCE and escalate our privileges to `root`.
+                </p>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

