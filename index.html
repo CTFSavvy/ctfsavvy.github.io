@@ -9,7 +9,7 @@
         content="Explore the exciting world of cybersecurity challenges with our detailed CTF writeup. Learn the strategies, techniques, and solutions for overcoming the puzzles and capturing the flags. Enhance your skills and dive into the thrilling realm of cybersecurity challenges.">
     <meta name="author" content="CTFLover">
     <link rel="stylesheet" href="css/style.css">
-    <meta name="google-site-verification" content="MyBM0-gplHiOKmnXCgQjntc4p_gPf7NPIUga-m6QYWo" />
+  <!--  <meta name="google-site-verification" content="MyBM0-gplHiOKmnXCgQjntc4p_gPf7NPIUga-m6QYWo" /> -->
 
     <script>
 
@@ -22,6 +22,7 @@
         });
     </script>
     <!-- Google tag (gtag.js) -->
+<!-- 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCHZD7DLQ0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -30,14 +31,12 @@
 
         gtag('config', 'G-RCHZD7DLQ0');
     </script>
-
+-->
     <link rel="icon" href="images/favicon.jpeg" type="image/png">
 
 </head>
 
 <body>
-
-
 
     <div class="main">
         <div class="navbar">
@@ -69,6 +68,22 @@
             <br>
             <h1 id="post">Posts</h1>
             <ul id="lists">
+
+
+                 <li>
+                    <h2><a target="blank" href="2024/01/24/htb/interface.html">HTB: interface</a></h2>
+                </li>
+
+                <p>Jan 22, 2024</p>
+
+                <img src="https://labs.hackthebox.com/storage/avatars/94653543357c89214d17c41f0177edd8.png" alt="Image"
+                    style="float: right; margin-right:50px; margin-left:50px; height:130px;" class="include_image ">
+                <p id='paragraph'>
+                Interface is a medium difficulty Linux machine that features a `DomPDF` API endpoint that is vulnerable to remote command execution by injecting `CSS` into the processed data. `DomPDF` can be tricked into storing a malicious font with a `PHP` file extension in its font cache, which can then be executed by accessing it from its exposed directories. Privilege escalation involves abusing a quoted expression injection inside a bash script.
+                </p>
+                <br>
+
+
 
                  <li>
                     <h2><a target="blank" href="2024/01/22/htb/05-nmap.html">HTB Endgame: XEN</a></h2>
